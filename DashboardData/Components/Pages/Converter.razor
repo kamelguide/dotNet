@@ -1,0 +1,20 @@
+@page "/converter"
+@rendermode InteractiveServer
+
+<h3>Convertisseur de Température</h3>
+
+<div class="mb-3">
+    <label>Température en Fahrenheit :</label>
+    <input type="number" class="form-control" @bind="TemperatureF" />
+</div>
+
+<div class="alert alert-success">
+    Résultat en Celsius : <strong>@( Math.Round((TemperatureF - 32) * 5 / 9, 2) )</strong> °C
+</div>
+
+@code { 
+    private double TemperatureF = 100; 
+
+
+    
+}
